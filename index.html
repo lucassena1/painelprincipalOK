@@ -67,7 +67,7 @@
     }
 
     main {
-      max-width: 1180px;
+      max-width: 1360px;
       margin: 15px auto 26px;
       padding: 0 16px
     }
@@ -76,18 +76,26 @@
       background: #fff;
       border: 1px solid var(--borda);
       border-radius: 14px;
-      padding: 18px 34px;
+      padding: 20px;
       display: grid;
-      grid-template-columns: 230px 1fr;
-      gap: 28px;
+      grid-template-columns: 440px 1fr;
+      gap: 24px;
       align-items: center;
       box-shadow: 0 3px 10px rgba(0, 0, 0, .05)
     }
 
-    .hero-logo {
-      width: 205px;
-      max-width: 100%;
-      object-fit: contain
+    .hero-foto {
+      width: 100%;
+    }
+
+    .hero-foto img {
+      width: 100%;
+      height: 265px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .12);
     }
 
     .hero h1 {
@@ -123,7 +131,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 255px;
+      grid-template-columns: 1fr 270px;
       gap: 14px;
       margin-top: 14px
     }
@@ -158,7 +166,7 @@
       border: 1px solid var(--borda);
       border-radius: 10px;
       padding: 15px 11px;
-      min-height: 248px;
+      min-height: 260px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -298,7 +306,7 @@
 
     .aviso strong {
       display: block;
-      margin-bottom: 3pxs
+      margin-bottom: 3px
     }
 
     .alerta-boletins {
@@ -387,8 +395,8 @@
         min-height: auto
       }
 
-      .hero-logo {
-        width: 180px
+      .hero-foto img {
+        height: 220px
       }
 
       .tag {
@@ -428,12 +436,30 @@
 
   <main>
     <section class="hero">
-      <div><img class="hero-logo" src="21grelogo.png" alt="Logo 21ª GRE" /></div>
+      <div class="hero-foto">
+        <img src="21gre.png" alt="Fachada da 21ª GRE" />
+      </div>
       <div>
         <h1>Bem-vindo ao Portal de Monitoramento da 21ª GRE</h1>
         <p>Nesse espaço temos algumas ferramentas de gestão de dados direcionados ao educacional da 21ª GRE.</p>
         <div class="notice">✅ Ambiente institucional protegido. Informações confidenciais e de uso exclusivo da coordenação.</div>
         <div class="notice">✅ Enviar os links separados para os técnicos.</div>
+        <div class="notice">
+          📊 <strong>Dashboard de Matrículas Enturmadas</strong><br>
+          Consulta do banco de dados, indicadores e acompanhamento das coordenações.
+        </div>
+
+        <div class="notice">
+          📝 <strong>Registro de Aulas</strong><br>
+          Uso interno. Os técnicos geram os relatórios individualizados por escola.<br>
+          <strong style="color: #e40a40">Proibido o compartilhamento com as unidades escolares em conformidade com a LGPD.</strong>
+        </div>
+
+        <div class="notice">
+          📄 <strong>Análise de Boletins (Ensino Regular e EJA)</strong><br>
+          Para realizar a análise baixe o pdf do boletim completo da turma<br>
+          <strong style="color: #0056b3">Compartilhamento permitido exclusivamente deste link.</strong>
+        </div>
         <div class="notice yellow alerta-boletins">⚠️ Compartilhamento permitido apenas do link dos boletins</div>
       </div>
     </section>
