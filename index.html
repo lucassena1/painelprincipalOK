@@ -156,11 +156,7 @@
       margin-bottom: 16px
     }
 
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px
-    }
+    
 
     .app {
       border: 1px solid var(--borda);
@@ -211,6 +207,44 @@
       font-size: 15px;
       line-height: 1.2;
       margin-bottom: 8px
+    }
+
+
+    .acesso {
+      width: 100%;
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin: 10px 0 10px;
+      font-weight: 800;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .acesso-coordenadores {
+      background: #fdecec;
+      color: #b71c1c;
+      border: 1px solid #f3b4b4;
+    }
+
+    .acesso-tecnicos {
+      background: #fff2df;
+      color: #c85a00;
+      border: 1px solid #ffc477;
+    }
+
+    .acesso-livre {
+      background: #e8f8ef;
+      color: #007a36;
+      border: 1px solid #9bd8af;
+    }
+
+    .obs-card {
+      display: block;
+      margin-top: 6px;
+      font-size: 11px;
+      line-height: 1.35;
+      color: #263d61;
+      font-weight: 700;
     }
 
     .app p {
@@ -365,9 +399,7 @@
         grid-template-columns: 1fr
       }
 
-      .apps {
-        grid-template-columns: repeat(2, 1fr)
-      }
+      
 
       .avisos-grid {
         grid-template-columns: 1fr
@@ -387,9 +419,7 @@
         padding: 0 10px
       }
 
-      .apps {
-        grid-template-columns: 1fr
-      }
+      
 
       .app {
         min-height: auto
@@ -422,6 +452,52 @@
       box-shadow: 0 12px 24px rgba(6, 43, 87, 0.16);
       border-color: #8fb9e8;
     }
+
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .app {
+      min-height: 310px;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    .app-top {
+      width: 100%;
+    }
+
+    .app-footer {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .transfer-title {
+      font-size: 14px !important;
+      line-height: 1.15 !important;
+      max-width: 100%;
+    }
+
+    .transfer-card p {
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    @media(max-width:900px) {
+      .apps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:560px) {
+      .apps {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -471,50 +547,89 @@
           <p class="muted">Acesse as ferramentas de gestão educacional</p>
           <div class="apps">
             <article class="app">
-              <div>
+              <div class="app-top">
                 <div class="icon i1">📊</div>
                 <h3 style="color:#003dab">Dashboard de Matrículas Enturmadas</h3>
                 <p>Quantidade de alunos da 21ª GRE. Verifique a data da última atualização dos dados e, caso necessário, solicite uma nova atualização.</p>
               </div>
-              <a class="btn blue" href="https://matriculas21gre.vercel.app/" target="_blank">↗ Acessar Sistema</a>
+              <div class="app-footer">
+                <div class="acesso acesso-coordenadores">🔒 Acesso: Coordenadores</div>
+                <a class="btn blue" href="https://matriculas21gre.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
             </article>
+
             <article class="app">
-              <div>
+              <div class="app-top">
                 <div class="icon i2">🧮</div>
                 <h3 style="color:#008d3d">Registro de Aulas</h3>
                 <p>Registre e acompanhe as aulas previstas e dadas pelas escolas da 21ª GRE.</p>
+                <span class="obs-card">Obs.: os técnicos geram os PDFs individualizados para as escolas.</span>
               </div>
-              <a class="btn green" href="https://aulasprevistasedadas02-07.vercel.app/" target="_blank">↗ Acessar Sistema</a>
+              <div class="app-footer">
+                <div class="acesso acesso-tecnicos">🟠 Acesso: Coordenadores e técnicos</div>
+                <a class="btn green" href="https://aulasprevistasedadas02-07.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
             </article>
+
             <article class="app">
-              <div>
+              <div class="app-top">
                 <div class="icon i3">📄</div>
                 <h3 style="color:#6630aa">Análise Boletim Ensino Regular</h3>
                 <p>Visualize e analise os boletins do ensino regular com indicadores e relatórios completos.</p>
               </div>
-              <a class="btn purple" href="https://ensino21-gre2-0-boletim.vercel.app/" target="_blank">↗ Acessar Sistema</a>
+              <div class="app-footer">
+                <div class="acesso acesso-livre">🟢 Acesso: Livre</div>
+                <a class="btn purple" href="https://ensino21-gre2-0-boletim.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
             </article>
+
             <article class="app">
-              <div>
+              <div class="app-top">
                 <div class="icon i4">🎓</div>
                 <h3 style="color:#f26700">Análise Boletim EJA</h3>
                 <p>Visualize e analise os boletins da Educação de Jovens e Adultos com relatórios completos.</p>
               </div>
-              <a class="btn orange" href="https://ejaanalisedeboletim-ok.vercel.app/" target="_blank">↗ Acessar Sistema</a>
-            </article>
-            <article class="app">
-              <div><div class="icon" style="background:#e8f4ff">📞</div><h3 style="color:#0b5fa5">Contatos 21ª GRE</h3><p>Consulte rapidamente os contatos institucionais, telefones e e-mails dos setores da 21ª GRE.</p></div>
-              <a class="btn blue" href="https://contatos21gre.vercel.app/" target="_blank">↗ Acessar Sistema</a>
-            </article>
-            <article class="app">
-              <div><div class="icon" style="background:#eef7e9">🎯</div><h3 style="color:#2e7d32">Portal EPT 2026</h3><p>Acesse documentos, calendários, orientações e materiais da Educação Profissional Técnica.</p></div>
-              <a class="btn green" href="https://ept-2026-ok.vercel.app/" target="_blank">↗ Acessar Sistema</a>
-            </article>
-            <article class="app">
-              <div><div class="icon" style="background:#fdecec">📑</div><h3 style="color:#b71c1c">Transferências e Remanejamento</h3><p>Ofício Circular SEDUC-PI/GAB/UETEP nº 1/2026.</p></div>
-              <a class="btn" style="background:#b71c1c" href="https://trnasferenciaeremanejamento-ok.vercel.app/" target="_blank">↗ Acessar Sistema</a>
+              <div class="app-footer">
+                <div class="acesso acesso-livre">🟢 Acesso: Livre</div>
+                <a class="btn orange" href="https://ejaanalisedeboletim-ok.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
             </article>
 
+            <article class="app">
+              <div class="app-top">
+                <div class="icon" style="background:#e8f4ff">📞</div>
+                <h3 style="color:#0b5fa5">Contatos 21ª GRE</h3>
+                <p>Consulte rapidamente os contatos institucionais, telefones e e-mails dos setores da 21ª GRE.</p>
+              </div>
+              <div class="app-footer">
+                <div class="acesso acesso-coordenadores">🔒 Acesso: Coordenadores</div>
+                <a class="btn blue" href="https://contatos21gre.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
+            </article>
+
+            <article class="app">
+              <div class="app-top">
+                <div class="icon" style="background:#eef7e9">🎯</div>
+                <h3 style="color:#2e7d32">Portal EPT 2026</h3>
+                <p>Acesse documentos, calendários, orientações e materiais da Educação Profissional Técnica.</p>
+              </div>
+              <div class="app-footer">
+                <div class="acesso acesso-livre">🟢 Acesso: Livre</div>
+                <a class="btn green" href="https://ept-2026-ok.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
+            </article>
+
+            <article class="app transfer-card">
+              <div class="app-top">
+                <div class="icon" style="background:#fdecec">📑</div>
+                <h3 class="transfer-title" style="color:#b71c1c">Transferências e Remanejamento</h3>
+                <p><strong>Ofício Circular SEDUC-PI/GAB/UETEP nº 1/2026.</strong><br>Consulte orientações, procedimentos, prazos e documentos referentes às transferências e remanejamentos.</p>
+              </div>
+              <div class="app-footer">
+                <div class="acesso acesso-livre">🟢 Acesso: Livre</div>
+                <a class="btn" style="background:#b71c1c" href="https://trnasferenciaeremanejamento-ok.vercel.app/" target="_blank">↗ Acessar</a>
+              </div>
+            </article>
           </div>
         </div>
 
